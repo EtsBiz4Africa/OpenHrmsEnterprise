@@ -103,7 +103,9 @@ class ReportZkDevice(models.Model):
                     z.address_id,
                     z.attendance_type,
                     z.punch_type,
-                    z.punching_time
+                    z.punching_time,
+                    z.check_out,
+                    z.check_in
             )
         """
         self._cr.execute(query)
