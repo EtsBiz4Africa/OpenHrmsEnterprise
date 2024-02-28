@@ -78,6 +78,8 @@ class ReportZkDevice(models.Model):
                                    ('4', 'Overtime In'),
                                    ('5', 'Overtime Out')], string='Punching Type', help="Select the punch type")
     punching_time = fields.Datetime(string='Punching Time', help="Punching Time")
+    check_in = fields.Datetime(string="Check In", required=False, )
+    check_out = fields.Datetime(string="Check Out", required=False, )
 
     def init(self):
         tools.drop_view_if_exists(self._cr, 'zk_report_daily_attendance')
@@ -90,7 +92,9 @@ class ReportZkDevice(models.Model):
                     z.address_id as address_id,
                     z.attendance_type as attendance_type,
                     z.punching_time as punching_time,
-                    z.punch_type as punch_type
+                    z.punch_type as punch_type,
+                    z.check_in as check_in,
+                    z.check_out as check_out
                 from zk_machine_attendance z
                     join hr_employee e on (z.employee_id=e.id)
                 GROUP BY

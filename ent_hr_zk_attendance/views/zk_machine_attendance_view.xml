@@ -53,8 +53,9 @@
                 <field name="name"/>
                 <field name="punch_type"/>
                 <field name="attendance_type"/>
-                <field name="punching_day"/>
                 <field name="punching_time"/>
+                <field name="check_in"/>
+                <field name="check_out"/>
                 <field name="address_id"/>
             </tree>
         </field>
