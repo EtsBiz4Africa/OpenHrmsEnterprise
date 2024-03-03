@@ -38,7 +38,7 @@
                 <filter name="today" string="Today" domain="[('punching_time', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('punching_time', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]" />
                 <filter string="Current Month" name="month" domain="[('punching_time', '&gt;=', datetime.datetime.now().strftime('%Y-%m-01'))]" />
                 <separator/>
-                <filter string="Employee" name="group_employee_id" context="{'group_by':'employee_id'}"/>
+                <filter string="Employee" name="group_employee_id" context="{'group_by':'name'}"/>
                 <field name="name" string="Name"/>
             </search>
         </field>
