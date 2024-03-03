@@ -39,7 +39,8 @@ class ZkMachine(models.Model):
         """overriding the __check_validity function for employee attendance."""
         pass
 
-    device_id = fields.Char(string='Biometric Device ID', help="Biometric device id")
+    # device_id = fields.Char(string='Biometric Device ID', help="Biometric device id")
+    device_id = fields.Many2one('zk.machine', string='Device ID', help="Address")
     punch_type = fields.Selection([('0', 'Check In'),
                                    ('1', 'Check Out'),
                                    ('2', 'Break Out'),
@@ -55,6 +56,7 @@ class ZkMachine(models.Model):
                                         ('4', 'Card')], string='Category', help="Select the attendance type")
     punching_time = fields.Datetime(string='Punching Time', help="Give the punching time")
     address_id = fields.Many2one('res.partner', string='Working Address', help="Address")
+    check_in = fields.Datetime(string="Check In", default=fields.Datetime.now, required=False)
 
 
 class ReportZkDevice(models.Model):
@@ -80,6 +82,7 @@ class ReportZkDevice(models.Model):
     punching_time = fields.Datetime(string='Punching Time', help="Punching Time")
     check_in = fields.Datetime(string="Check In", required=False, )
     check_out = fields.Datetime(string="Check Out", required=False, )
+    device_id = fields.Many2one('zk.machine', string='Device ID', help="Address")
 
     def init(self):
         tools.drop_view_if_exists(self._cr, 'zk_report_daily_attendance')
@@ -94,9 +97,11 @@ class ReportZkDevice(models.Model):
                     z.punching_time as punching_time,
                     z.punch_type as punch_type,
                     z.check_in as check_in,
-                    z.check_out as check_out
+                    z.check_out as check_out,
+                    z.device_id as device_id
                 from zk_machine_attendance z
                     join hr_employee e on (z.employee_id=e.id)
+                    join zk_machine m on (z.device_id=m.id)
                 GROUP BY
                     z.employee_id,
                     z.write_date,
@@ -105,7 +110,8 @@ class ReportZkDevice(models.Model):
                     z.punch_type,
                     z.punching_time,
                     z.check_out,
-                    z.check_in
+                    z.check_in,
+                    z.device_id
             )
         """
         self._cr.execute(query)
