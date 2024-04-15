@@ -32,7 +32,7 @@
     'depends': ['base', 'hr','hr_contract', 'hr_payroll', 'hr_expense', 'hr_attendance','hr_holidays'],
     'data': [
         'views/hr_company_view.xml',
-        'views/multi_company_view.xml',
+        'security/multi_company.xml',
     ],
     'images': ['static/description/banner.png'],
     'license': 'OPL-1',
