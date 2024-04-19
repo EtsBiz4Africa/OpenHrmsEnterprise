@@ -8,6 +8,7 @@
         <tree string="Employee Family">
             <field name="member_name"/>
             <field name="employee_id"/>
+            <field name="relation_id"/>
             <field name="member_gender"/>
             <field name="birth_date"/>
             <field name="place_of_birth"/>
