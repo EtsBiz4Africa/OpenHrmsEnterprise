@@ -2,6 +2,18 @@
 <odoo>
     <data>
 
+    <record id="view_hr_employee_family_tree" model="ir.ui.view">
+        <field name="name">hr.employee.family.tree</field>
+        <field name="model">hr.employee.family</field>
+        <field name="arch" type="xml">
+            <field name="member_name"/>
+            <field name="employee_id"/>
+            <field name="member_gender"/>
+            <field name="birth_date"/>
+            <field name="place_of_birth"/>
+        </field>
+    </record>
+
     <record id="action_hr_employee_family" model="ir.actions.act_window">
  93           <field name="name">Employee's family members</field>
  94           <field name="res_model">hr.employee.family</field>
