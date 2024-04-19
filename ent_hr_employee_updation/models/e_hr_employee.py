@@ -43,6 +43,8 @@ class HrEmployeeFamilyInfo(models.Model):
     member_name = fields.Char(string='Name')
     member_contact = fields.Char(string='Contact No')
     birth_date = fields.Date(string="DOB", tracking=True)
+    member_gender = fields.Selection(GENDER_SELECTION, string="Gender")
+    place_of_birth = fields.Char('Place of birth')
 
 
 class HrEmployee(models.Model):

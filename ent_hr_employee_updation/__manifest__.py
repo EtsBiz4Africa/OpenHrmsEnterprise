@@ -37,6 +37,7 @@
         'views/e_contract_days_view.xml',
         'views/e_updation_config.xml',
         'views/e_hr_employee_view.xml',
+        'views/e_hr_employee_family.xml',
     ],
     'images': ['static/description/banner.png'],
     'license': 'OPL-1',
