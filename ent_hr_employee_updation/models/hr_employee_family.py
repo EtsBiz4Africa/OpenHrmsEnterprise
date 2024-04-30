@@ -44,3 +44,5 @@ class HrEmployeeFamily(models.Model):
                                  help="Contact Number of the Member")
     birth_date = fields.Date(string="DOB", tracking=True,
                              help="Birth date of family member")
+    member_gender = fields.Selection(GENDER_SELECTION, string="Gender")
+    place_of_birth = fields.Char('Place of birth')

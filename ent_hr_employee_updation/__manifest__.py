@@ -38,6 +38,7 @@
         'data/ir_cron_data.xml',
         'views/hr_contract_views.xml',
         'views/hr_employee_views.xml',
+        'views/e_hr_employee_family.xml',
         'views/res_config_settings_views.xml',
     ],
     'images': ['static/description/banner.jpg'],
