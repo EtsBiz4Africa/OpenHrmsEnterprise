@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 09:05+0000\n"
-"PO-Revision-Date: 2024-02-28 11:10+0200\n"
+"POT-Creation-Date: 2024-04-30 13:43+0000\n"
+"PO-Revision-Date: 2024-04-30 15:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4\n"
 
 #. module: ent_hr_employee_updation
 #: model_terms:ir.ui.view,arch_db:ent_hr_employee_updation.hr_contract_view_form
@@ -89,9 +89,20 @@ msgid "Employee Contract"
 msgstr "Contrat de l'employé"
 
 #. module: ent_hr_employee_updation
+#: model_terms:ir.ui.view,arch_db:ent_hr_employee_updation.view_hr_employee_family_tree
+msgid "Employee Family"
+msgstr "Composition familiales"
+
+#. module: ent_hr_employee_updation
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee__joining_date
 msgid "Employee joining date computed from the contract start date"
-msgstr ""
+msgstr "Date d'adhésion de l'employé basé sur le début de contrat"
+
+#. module: ent_hr_employee_updation
+#: model:ir.actions.act_window,name:ent_hr_employee_updation.action_hr_employee_family
+#: model:ir.ui.menu,name:ent_hr_employee_updation.family_members
+msgid "Employee's family members"
+msgstr "Composition familiale de l'employé"
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee__id_expiry_date
@@ -120,6 +131,16 @@ msgid "Family Information"
 msgstr "Information de famille"
 
 #. module: ent_hr_employee_updation
+#: model:ir.model.fields.selection,name:ent_hr_employee_updation.selection__hr_employee_family__member_gender__female
+msgid "Female"
+msgstr "Féminin"
+
+#. module: ent_hr_employee_updation
+#: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__member_gender
+msgid "Gender"
+msgstr "Genre"
+
+#. module: ent_hr_employee_updation
 #: model:ir.actions.server,name:ent_hr_employee_updation.ir_cron_hr_employee_data_expiration_ir_actions_server
 msgid "HR Employee Data Expiration"
 msgstr "Expiration des données d'employés"
@@ -127,7 +148,7 @@ msgstr "Expiration des données d'employés"
 #. module: ent_hr_employee_updation
 #: model:ir.model,name:ent_hr_employee_updation.model_hr_employee_family
 msgid "HR Employee Family"
-msgstr ""
+msgstr "Famille de l'employé"
 
 #. module: ent_hr_employee_updation
 #: model:ir.ui.menu,name:ent_hr_employee_updation.hr_management_menu
@@ -147,10 +168,11 @@ msgstr ""
 
 #. module: ent_hr_employee_updation
 #. odoo-python
+#: code:addons/EtsBiz4Africa/OpenHrmsEnterprise/ent_hr_employee_updation/models/hr_employee.py:0
 #: code:addons/ent_hr_employee_updation/models/hr_employee.py:0
 #, python-format
 msgid "ID-%s Expired On %s"
-msgstr ""
+msgstr "ID-%s expiré le %s"
 
 #. module: ent_hr_employee_updation
 #: model_terms:ir.ui.view,arch_db:ent_hr_employee_updation.view_employee_form
@@ -175,14 +197,19 @@ msgid "Last Updated on"
 msgstr "Dernière mise à jour le"
 
 #. module: ent_hr_employee_updation
+#: model:ir.model.fields.selection,name:ent_hr_employee_updation.selection__hr_employee_family__member_gender__male
+msgid "Male"
+msgstr "Masculin"
+
+#. module: ent_hr_employee_updation
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee_family__member_name
 msgid "Member name in Family"
-msgstr ""
+msgstr "Membres dans la famille"
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee__personal_mobile
 msgid "Mobile"
-msgstr "Mobile"
+msgstr ""
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__member_name
@@ -211,12 +238,18 @@ msgid "Number of Days of Notice Period"
 msgstr "Jours de préavis"
 
 #. module: ent_hr_employee_updation
+#: model:ir.model.fields.selection,name:ent_hr_employee_updation.selection__hr_employee_family__member_gender__other
+msgid "Other"
+msgstr "Autre"
+
+#. module: ent_hr_employee_updation
 #: model_terms:ir.ui.view,arch_db:ent_hr_employee_updation.view_employee_form
 msgid "Passport ID"
 msgstr "Nr Passeport"
 
 #. module: ent_hr_employee_updation
 #. odoo-python
+#: code:addons/EtsBiz4Africa/OpenHrmsEnterprise/ent_hr_employee_updation/models/hr_employee.py:0
 #: code:addons/ent_hr_employee_updation/models/hr_employee.py:0
 #, python-format
 msgid "Passport-%s Expired On %s"
@@ -228,14 +261,19 @@ msgid "Personal mobile number of the employee"
 msgstr ""
 
 #. module: ent_hr_employee_updation
+#: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__place_of_birth
+msgid "Place of birth"
+msgstr "Lieu de naissance"
+
+#. module: ent_hr_employee_updation
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_res_config_settings__notice_period
 msgid "Provide Notice Period for Employees"
-msgstr ""
+msgstr "Fournir le préavis des employés"
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__relation_id
 msgid "Relation"
-msgstr "Relation"
+msgstr ""
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_relation__name
