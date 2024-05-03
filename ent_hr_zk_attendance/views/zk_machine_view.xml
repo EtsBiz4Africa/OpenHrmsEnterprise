@@ -58,9 +58,9 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
         <field name="arch" type="xml">
-            <field name="user_id" position="after">
+            <group name="active_group" position="inside">
                 <field name="device_id"/>
-            </field>
+            </group>
         </field>
     </record>
 
