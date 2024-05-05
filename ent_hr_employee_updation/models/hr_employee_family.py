@@ -35,8 +35,7 @@ class HrEmployeeFamily(models.Model):
     _inherit = ['mail.thread']
 
     employee_id = fields.Many2one(comodel_name='hr.employee', string="Employee",
-                                  help='Select corresponding Employee',
-                                  invisible=1)
+                                  help='Select corresponding Employee')
     relation_id = fields.Many2one(comodel_name='hr.employee.relation',
                                   string="Relation",
                                   help="Relationship with the employee")
