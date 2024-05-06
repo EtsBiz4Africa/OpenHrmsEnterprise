@@ -62,6 +62,7 @@ class ZkMachine(models.Model):
 
 class ReportZkDevice(models.Model):
     _name = 'zk.report.daily.attendance'
+    _description = "Daily attendance"
     _auto = False
     _order = 'punching_day desc'
 
