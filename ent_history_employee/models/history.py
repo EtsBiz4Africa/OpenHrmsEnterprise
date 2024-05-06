@@ -208,6 +208,7 @@ class WageDetails(models.Model):
 
 class DepartmentHistory(models.Model):
     _name = 'department.history'
+    _description = "Department history"
 
     employee_id = fields.Char(string='Employee Id', help="Employee")
     employee_name = fields.Char(string='EmployeFalsee Name', help="Name")
