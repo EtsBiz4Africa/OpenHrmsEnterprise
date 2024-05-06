@@ -32,6 +32,7 @@ class HrEmployee(models.Model):
 
 class ZkMachine(models.Model):
     _name = 'zk.machine.attendance'
+    _description = "ZKTeco Attendance"
     _inherit = 'hr.attendance'
 
     @api.constrains('check_in', 'check_out', 'employee_id')
