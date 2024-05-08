@@ -49,6 +49,7 @@ class HrAttendance(models.Model):
 
 class ZkMachine(models.Model):
     _name = 'zk.machine'
+    _description = "ZKTeco Biometric device"
 
     name = fields.Char(string='Name', required=True)
     address_ip = fields.Char(string='Machine IP', required=True)

@@ -23,7 +23,7 @@
 from collections import defaultdict
 from datetime import timedelta, datetime, date
 from dateutil.relativedelta import relativedelta
-import pandas as pd
+#import pandas as pd
 from pytz import utc
 from odoo import models, fields, api, _
 from odoo.http import request

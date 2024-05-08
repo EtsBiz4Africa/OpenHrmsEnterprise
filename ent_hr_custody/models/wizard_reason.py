@@ -27,6 +27,7 @@ class WizardReason(models.TransientModel):
         Hr custody contract refuse wizard.
             """
     _name = 'wizard.reason'
+    _description = "Custody Refuse Wizard"
 
     def send_reason(self):
         context = self._context

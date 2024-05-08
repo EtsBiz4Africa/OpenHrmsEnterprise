@@ -208,6 +208,7 @@ class WageDetails(models.Model):
 
 class DepartmentHistory(models.Model):
     _name = 'department.history'
+    _description = "Department history"
 
     employee_id = fields.Char(string='Employee Id', help="Employee")
     employee_name = fields.Char(string='EmployeFalsee Name', help="Name")
@@ -232,6 +233,7 @@ class TimesheetCost(models.Model):
 
 class SalaryHistory(models.Model):
     _name = 'salary.history'
+    _description = "Employee Salary history"
 
     employee_id = fields.Char(string='Employee Id', help="Employee")
     employee_name = fields.Char(string='Employee Name', help="Name")
@@ -241,6 +243,7 @@ class SalaryHistory(models.Model):
 
 class ContractHistory(models.Model):
     _name = 'contract.history'
+    _description = "Employee Contract history"
 
     employee_id = fields.Char(string='Employee Id', help="Employee")
     employee_name = fields.Char(string='Employee Name', help="Name")
