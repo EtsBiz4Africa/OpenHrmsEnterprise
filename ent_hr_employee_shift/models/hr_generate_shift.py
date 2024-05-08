@@ -24,6 +24,7 @@ from odoo import models, fields
 
 class HrGenerateShift(models.TransientModel):
     _name = 'hr.shift.generate'
+    _description = "Generate shift schedule"
 
     hr_department = fields.Many2one('hr.department',
                                     string="Department",
