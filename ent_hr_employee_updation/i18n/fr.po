@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-24 11:52+0000\n"
-"PO-Revision-Date: 2024-01-24 17:18+0200\n"
+"POT-Creation-Date: 2024-05-08 17:11+0000\n"
+"PO-Revision-Date: 2024-05-08 19:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4\n"
 
 #. module: ent_hr_employee_updation
 #: model_terms:ir.ui.view,arch_db:ent_hr_employee_updation.hr_contract_notice_period
@@ -107,6 +107,11 @@ msgid "Employee Contract"
 msgstr "Contrat de l'employé"
 
 #. module: ent_hr_employee_updation
+#: model_terms:ir.ui.view,arch_db:ent_hr_employee_updation.view_hr_employee_family_tree
+msgid "Employee Family"
+msgstr ""
+
+#. module: ent_hr_employee_updation
 #: model:ir.model,name:ent_hr_employee_updation.model_hr_employee_relation
 msgid "Employee family relations"
 msgstr "Relation"
@@ -115,6 +120,12 @@ msgstr "Relation"
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee__joining_date
 msgid "Employee joining date computed from the contract start date"
 msgstr "Date d'engagement calculée"
+
+#. module: ent_hr_employee_updation
+#: model:ir.actions.act_window,name:ent_hr_employee_updation.action_hr_employee_family
+#: model:ir.ui.menu,name:ent_hr_employee_updation.family_members
+msgid "Employee's family members"
+msgstr ""
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee__id_expiry_date
@@ -137,6 +148,11 @@ msgid "Family Information"
 msgstr "Information de famille"
 
 #. module: ent_hr_employee_updation
+#: model:ir.model.fields.selection,name:ent_hr_employee_updation.selection__hr_employee_family__member_gender__female
+msgid "Female"
+msgstr "Femme"
+
+#. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__message_follower_ids
 msgid "Followers"
 msgstr "Abonnés"
@@ -150,6 +166,11 @@ msgstr "Abonnés (Partenaires)"
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee_family__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
+
+#. module: ent_hr_employee_updation
+#: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__member_gender
+msgid "Gender"
+msgstr "Genre"
 
 #. module: ent_hr_employee_updation
 #: model:ir.actions.server,name:ent_hr_employee_updation.employee_data_reminder_ir_actions_server
@@ -206,13 +227,16 @@ msgstr "Pièce d'identité"
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee_family__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Si cette case est cochée, de nouveaux messages nécessitent votre attention."
+msgstr ""
+"Si cette case est cochée, de nouveaux messages nécessitent votre attention."
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee_family__message_has_error
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee_family__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Si cette case est cochée, certains messages présentent une erreur de livraison."
+msgstr ""
+"Si cette case est cochée, certains messages présentent une erreur de "
+"livraison."
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__message_is_follower
@@ -248,6 +272,11 @@ msgid "Main Attachment"
 msgstr "Pièce jointe principale"
 
 #. module: ent_hr_employee_updation
+#: model:ir.model.fields.selection,name:ent_hr_employee_updation.selection__hr_employee_family__member_gender__male
+msgid "Male"
+msgstr "Homme"
+
+#. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__message_has_error
 msgid "Message Delivery error"
 msgstr "Erreur de livraison de message"
@@ -255,12 +284,12 @@ msgstr "Erreur de livraison de message"
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__message_ids
 msgid "Messages"
-msgstr "Messages"
+msgstr ""
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee__personal_mobile
 msgid "Mobile"
-msgstr "Mobile"
+msgstr ""
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__my_activity_date_deadline
@@ -329,6 +358,11 @@ msgid "Number of messages with delivery error"
 msgstr "Nombre de messages avec erreur de livraison"
 
 #. module: ent_hr_employee_updation
+#: model:ir.model.fields.selection,name:ent_hr_employee_updation.selection__hr_employee_family__member_gender__other
+msgid "Other"
+msgstr "Autre"
+
+#. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee__passport_attachment_id
 msgid "Passport Attachment"
 msgstr "Passeport joint"
@@ -347,6 +381,11 @@ msgstr "Nr Passeport"
 #: model:ir.model.fields,help:ent_hr_employee_updation.field_hr_employee__personal_mobile
 msgid "Personal mobile number of the employee"
 msgstr "Téléphone mobile de l'employé"
+
+#. module: ent_hr_employee_updation
+#: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__place_of_birth
+msgid "Place of birth"
+msgstr "Lieu de naissance"
 
 #. module: ent_hr_employee_updation
 #: model:ir.model.fields,field_description:ent_hr_employee_updation.field_hr_employee_family__relation_id
