@@ -77,7 +77,7 @@ class HrEmployee(models.Model):
         help="Employee joining date computed from the contract start date",
         compute='_compute_joining_date', store=True)
     id_expiry_date = fields.Date(
-        string='Expiry Date',
+        string='ID Expiry Date',
         help='Expiry date of Identification ID')
     passport_expiry_date = fields.Date(
         string='Expiry Date',
