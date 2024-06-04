@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
+<!--
+    FIXME #6 [MIG] [17.0] Found deprecated directive @t-esc='debug' in template 181. Replace by @t-out
+ -->
 <!--    Displaying Employee Details-->
     <t t-name="HrDashboardMain">
         <div class="oh_dashboards">
