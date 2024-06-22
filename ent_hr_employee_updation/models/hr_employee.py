@@ -70,17 +70,17 @@ class HrEmployee(models.Model):
                     self.env['mail.mail'].sudo().create(main_content).send()
 
     personal_mobile = fields.Char(
-        string='Mobile',
+        string='Mobile', groups="hr.group_hr_user",
         help="Personal mobile number of the employee")
     joining_date = fields.Date(
-        string='Joining Date',
+        string='Joining Date', groups="hr.group_hr_user",
         help="Employee joining date computed from the contract start date",
         compute='_compute_joining_date', store=True)
     id_expiry_date = fields.Date(
-        string='ID Expiry Date',
+        string='ID Expiry Date', groups="hr.group_hr_user",
         help='Expiry date of Identification ID')
     passport_expiry_date = fields.Date(
-        string='Expiry Date',
+        string='Expiry Date', groups="hr.group_hr_user",
         help='Expiry date of Passport ID')
     id_attachment_ids = fields.Many2many(
         comodel_name='ir.attachment', relation='id_attachment_rel',
