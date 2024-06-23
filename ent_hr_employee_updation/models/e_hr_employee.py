@@ -61,11 +61,11 @@ class HrEmployee(models.Model):
                 exp_date = fields.Date.from_string(
                     emp.id_expiry_date) - timedelta(days=14)
                 if current_date >= exp_date:
-                    mail_content = "  Hello  " + emp.name + ",<br>Your ID " + emp.identification_id + "is going to expire on " + \
+                    mail_content = "  Hello  " + emp.name + ",<br>Your ID " + emp.id_attachment_id + "is going to expire on " + \
                                    str(emp.id_expiry_date) + ". Please renew it before expiry date"
                     main_content = {
                         'subject': _('ID-%s Expired On %s') % (
-                            emp.identification_id, emp.id_expiry_date),
+                            emp.id_attachment_id, emp.id_expiry_date),
                         'author_id': self.env.user.partner_id.id,
                         'body_html': mail_content,
                         'email_to': emp.work_email,

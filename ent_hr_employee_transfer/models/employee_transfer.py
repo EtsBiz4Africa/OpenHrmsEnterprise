@@ -92,7 +92,7 @@ class EmployeeTransfer(models.Model):
         self.old_employee_id = self.employee_id
         emp = self.employee_id.sudo().read(
             ['name', 'private_email', 'gender',
-             'identification_id', 'passport_id'])[0]
+             'id_attachment_id', 'passport_id'])[0]
         del emp['id']
         emp.update({
             'company_id': self.branch.id
