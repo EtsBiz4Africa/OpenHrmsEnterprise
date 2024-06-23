@@ -28,7 +28,8 @@
                 <field name="employee_type" position="after">
                     <field name="joining_date"/>
                 </field>
-                <field name="id_attachment_id" position="replace"/>
+                <!-- FIXME what's the actual field -->
+                <!-- <field name="id_attachment_id" position="replace"/> -->
                 <field name="passport_id" position="replace"/>
                 <xpath expr="//field[@name='marital']" position="after">
                   <field name="dependents"/>
