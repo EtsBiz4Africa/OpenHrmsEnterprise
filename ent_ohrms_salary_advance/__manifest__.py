@@ -22,7 +22,7 @@
 ################################################################################
 {
     'name': 'Enterprise OpenHRMS Advance Salary',
-    'version': '17.0.1.0.0',
+    'version': '1.0.1',
     'category': 'Generic Modules/Human Resources',
     'summary': 'Advance Salary In HR',
     'description': "Helps you to manage Advance Salary Request of "
