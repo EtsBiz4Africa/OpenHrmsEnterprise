@@ -222,6 +222,7 @@ class DepartmentHistory(models.Model):
 
 class TimesheetCost(models.Model):
     _name = 'timesheet.cost'
+    _description = "Timesheet cost"
 
     employee_id = fields.Char(string='Employee Id', help="Employee")
     employee_name = fields.Char(string='Employee Name', help="Name")
