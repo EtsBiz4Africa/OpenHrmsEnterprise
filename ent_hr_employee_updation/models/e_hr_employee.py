@@ -45,6 +45,7 @@ class HrEmployeeFamilyInfo(models.Model):
     birth_date = fields.Date(string="DOB", tracking=True)
     member_gender = fields.Selection(GENDER_SELECTION, string="Gender")
     place_of_birth = fields.Char('Place of birth')
+    company_id = fields.Many2one(related="employee_id.company_id", string="Company", readonly=True)
 
 
 class HrEmployee(models.Model):
