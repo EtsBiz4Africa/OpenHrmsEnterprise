@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="employee_relationship" model="hr.employee.relation">
+    <record id="employee_relationship_child" model="hr.employee.relation">
+            <field name="name">Children</field>
+    </record>
+
+    <record id="employee_relationship_spouse" model="hr.employee.relation">
             <field name="name">Spouse</field>
     </record>
 
