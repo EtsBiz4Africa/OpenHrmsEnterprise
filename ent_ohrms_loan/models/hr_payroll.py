@@ -36,6 +36,8 @@ class HrPayslip(models.Model):
     _inherit = 'hr.payslip'
 
     def compute_sheet(self):
+        #FIXME #7 Should not delete previous lines
+        return super(HrPayslip, self).compute_sheet()
         """Update the computing sheet of a payslip by adding loan details
         to the 'Other Inputs' section."""
         for data in self:
