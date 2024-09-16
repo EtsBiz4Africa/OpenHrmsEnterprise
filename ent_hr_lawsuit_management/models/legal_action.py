@@ -89,7 +89,7 @@ class HrLawsuit(models.Model):
                                  states={'draft': [('readonly', False)]},
                                  help='Choose the partner')
     other_name = fields.Char(string='Name', help='Enter the details of other type')
-    party2_name = fields.Char(compute='set_party2', string='Name', store=True)
+    party2_name = fields.Char(compute='set_party2', string='Second party name', store=True)
     case_details = fields.Html(string='Case Details', copy=False, tracking=True,
                                help='More details of the case')
     state = fields.Selection([('draft', 'Draft'),

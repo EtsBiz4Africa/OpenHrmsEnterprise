@@ -33,7 +33,7 @@ class HrEmployeeContract(models.Model):
                                      string="Shift Schedule",
                                      help="Shift schedule")
     working_hours = fields.Many2one('resource.calendar',
-                                    string='Working Schedule',
+                                    string='Working Hours',
                                     help="Working hours")
     department_id = fields.Many2one('hr.department',
                                     string="Department",
