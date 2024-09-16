@@ -129,7 +129,7 @@ class HrEmployee(models.Model):
 
     @api.onchange('spouse_complete_name', 'spouse_birthdate')
     def onchange_spouse(self):
-        relation = self.env.ref('ent_hr_employee_updation.employee_relationship')
+        relation = self.env.ref('ent_hr_employee_updation.employee_relationship_spouse')
         if self.spouse_complete_name and self.spouse_birthdate:
             self.fam_ids = [(0, 0, {
                 'member_name': self.spouse_complete_name,
