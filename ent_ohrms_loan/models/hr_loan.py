@@ -99,13 +99,13 @@ class HrLoan(models.Model):
                                      compute='_compute_loan_amount',
                                      help="Total paid amount")
 
-    state = fields.Selection([
+    state = fields.Selection(selection_add=[
         ('draft', 'Draft'),
         ('waiting_approval_1', 'Submitted'),
         ('approve', 'Approved'),
         ('refuse', 'Refused'),
         ('cancel', 'Canceled'),
-    ], string="State", default='draft', tracking=True, copy=False,  )
+        ], string="State", default='draft', tracking=True, copy=False,  )
 
     @api.model_create_multi
     def create(self, vals_list):
