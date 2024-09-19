@@ -93,7 +93,6 @@ class ReportZkDevice(models.Model):
                 select
                     min(z.id) as id,
                     z.employee_id as name,
-                    z.check_in as punching_day,
                     z.address_id as address_id,
                     z.attendance_type as attendance_type,
                     z.punching_time as punching_time,
@@ -101,6 +100,7 @@ class ReportZkDevice(models.Model):
                     z.check_in as check_in,
                     z.check_out as check_out,
                     z.device_id as device_id
+                    check_in as punching_day,
                 from zk_machine_attendance z
                     join hr_employee e on (z.employee_id=e.id)
                     join zk_machine m on (z.device_id=m.id)
