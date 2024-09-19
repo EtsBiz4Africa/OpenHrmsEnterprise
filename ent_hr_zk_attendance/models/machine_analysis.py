@@ -93,7 +93,7 @@ class ReportZkDevice(models.Model):
                 select
                     min(z.id) as id,
                     z.employee_id as name,
-                    z.write_date as punching_day,
+                    z.check_in as punching_day,
                     z.address_id as address_id,
                     z.attendance_type as attendance_type,
                     z.punching_time as punching_time,
