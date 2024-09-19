@@ -35,8 +35,8 @@
             <search string="Hr Attendance Search">
                 <filter icon="terp-stock_align_left_24" string="My Attendance" name="my_attendance" domain="[('name.user_id.id', '=', uid)]" />
                 <filter string="Valid attendance" name="valid_attendance" domain="[('check_in', '!=', False), ('check_out', '!=', False)]" />
-                <filter name="today" string="Today" domain="[('punching_time', '>=', context_today().strftime('%%Y-%%m-%%d 00:00:00')), ('punching_time', '<=', context_today().strftime('%%Y-%%m-%%d 23:59:59'))]" />
-                <filter string="Current Month" name="month" domain="[('punching_time', '>=', (context_today().replace(day=1)).strftime('%%Y-%%m-%%d 00:00:00'))]" />
+                <filter name="today" string="Today" domain="[('punching_time', '&gt;=', context_today().strftime('%%Y-%%m-%%d 00:00:00')), ('punching_time', '&lt;=', context_today().strftime('%%Y-%%m-%%d 23:59:59'))]" />
+                <filter string="Current Month" name="month" domain="[('punching_time', '&gt;=', (context_today().replace(day=1)).strftime('%%Y-%%m-%%d 00:00:00'))]" />
                 <separator/>
                 <filter string="Employee" name="group_employee_id" context="{'group_by':'name'}"/>
                 <field name="name" string="Name"/>
