@@ -35,7 +35,6 @@
             <search string="Hr Attendance Search">
                 <filter icon="terp-stock_align_left_24" string="My Attendance" name="my_attendance" domain="[('name.user_id.id', '=', uid)]" />
                 <filter string="Valid attendance" name="valid_attendance" domain="[('check_in', '!=', False), ('check_out', '!=', False)]" />
-                <filter name="today" string="Today" domain="[('punching_time', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('punching_time', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]" />
                 <filter name="today" string="Today" domain="[
                 ('punching_time', '&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0)))
                 ('punching_time', '&lt;=', datetime.datetime.combine(context_today(), datetime.time(23,59,59)))
