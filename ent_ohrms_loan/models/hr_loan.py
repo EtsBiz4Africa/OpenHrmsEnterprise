@@ -83,7 +83,7 @@ class HrLoan(models.Model):
     currency_id = fields.Many2one('res.currency', string='Currency',
                                   required=True, help="Currency",
                                   default=lambda
-                                      self: self.env.user.company_id.currency_id)
+                                  self: self.env.user.company_id.currency_id)
     job_position = fields.Many2one('hr.job', related="employee_id.job_id",
                                    readonly=True, string="Job Position",
                                    help="Job position")
@@ -99,13 +99,19 @@ class HrLoan(models.Model):
                                      compute='_compute_loan_amount',
                                      help="Total paid amount")
 
-    state = fields.Selection(selection_add=[
-        ('draft', 'Draft'),
-        ('waiting_approval_1', 'Submitted'),
-        ('approve', 'Approved'),
-        ('refuse', 'Refused'),
-        ('cancel', 'Canceled'),
-        ], string="State", default='draft', tracking=True, copy=False,  )
+    state = fields.Selection(selection_add=[('draft', 'Draft'),
+                              ('waiting_approval_1', 'Submitted'),
+                              ('approve', 'Approved'),
+                              ('refuse', 'Refused'),
+                              ('cancel', 'Canceled'),
+                              ]
+                             string="State",
+                             default='draft',
+                             tracking=True,
+                             copy=False,)
+    # state = fields.Selection(selection_add=[
+    #     ('draft', 'Draft'),
+    #     ], string="State", default='draft', tracking=True, copy=False,  )
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -119,7 +125,8 @@ class HrLoan(models.Model):
                 raise ValidationError(
                     _("The employee has already a pending installment"))
             else:
-                values['name'] = self.env['ir.sequence'].get('hr.loan.seq') or ' '
+                values['name'] = self.env['ir.sequence'].get(
+                    'hr.loan.seq') or ' '
         res = super(HrLoan, self).create(vals_list)
         return res
 
