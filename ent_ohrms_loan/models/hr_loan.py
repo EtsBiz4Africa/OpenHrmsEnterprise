@@ -109,9 +109,6 @@ class HrLoan(models.Model):
                              default='draft',
                              tracking=True,
                              copy=False,)
-    # state = fields.Selection(selection_add=[
-    #     ('draft', 'Draft'),
-    #     ], string="State", default='draft', tracking=True, copy=False,  )
 
     @api.model_create_multi
     def create(self, vals_list):
