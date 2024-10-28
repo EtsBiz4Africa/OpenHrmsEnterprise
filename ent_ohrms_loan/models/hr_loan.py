@@ -99,12 +99,11 @@ class HrLoan(models.Model):
                                      compute='_compute_loan_amount',
                                      help="Total paid amount")
 
-    state = fields.Selection(selection_add=[('draft', 'Draft'),
-                                            ('waiting_approval_1', 'Submitted'),
-                                            ('approve', 'Approved'),
-                                            ('refuse', 'Refused'),
-                                            ('cancel', 'Canceled'),
-                                            ],
+    state = fields.Selection(selection=[('draft', 'Draft'),
+                                        ('waiting_approval_1', 'Submitted'),
+                                        ('approve', 'Approved'),
+                                        ('refuse', 'Refused'),
+                                        ('cancel', 'Canceled'),],
                              string="State",
                              default='draft',
                              tracking=True,
