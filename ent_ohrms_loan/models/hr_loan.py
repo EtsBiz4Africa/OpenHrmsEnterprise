@@ -28,6 +28,10 @@ from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError, UserError
 
 
+
+LOAN_STATE = [
+    ('draft', "Draft"),
+] 
 class HrLoan(models.Model):
     """Model for Loan Requests for employees."""
     _name = 'hr.loan'
@@ -98,16 +102,13 @@ class HrLoan(models.Model):
     total_paid_amount = fields.Float(string="Total Paid Amount", store=True,
                                      compute='_compute_loan_amount',
                                      help="Total paid amount")
-
-    state = fields.Selection(selection=[('draft', 'Draft'),
-                                        ('waiting_approval_1', 'Submitted'),
-                                        ('approve', 'Approved'),
-                                        ('refuse', 'Refused'),
-                                        ('cancel', 'Canceled'),],
-                             string="State",
-                             default='draft',
-                             tracking=True,
-                             copy=False,)
+    
+    state = fields.Selection(
+        selection=LOAN_STATE,
+        string="Status",
+        readonly=True, copy=False, index=True,
+        tracking=3,
+        default='draft')
 
     @api.model_create_multi
     def create(self, vals_list):
